@@ -1,0 +1,10 @@
+<h1 class="text-center">Guitar Lovers Unite</h1>
+
+<br/>
+
+<% @posts.each do |post| %>
+	<div class="launch-box span3 text-center">
+		<h1><%= post.title %></h1>
+		<p><%= post.description %></p>
+	</div>
+<% end %>
