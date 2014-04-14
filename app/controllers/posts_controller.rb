@@ -13,6 +13,27 @@ class PostsController < ApplicationController
 		redirect_to posts_path
 	end
 
+	def show
+	end
+
+	def edit
+		@post = Post.find(params[:id])
+	end
+
+	def update
+		@post = Post.find(params[:id])
+		@post.update_attributes!(post_params)
+		flash[:notice] = "The image #{@post.title} was successfully updated"
+		redirect_to posts_path
+	end
+
+	def destroy
+		@post = Post.find(params[:id])
+		@post.destroy
+		flash[:notice] = "The image '#{@post.title}' was deleted."
+		redirect_to posts_path
+	end
+
 	private 
 
 	def post_params

@@ -1,10 +1,10 @@
 <div class="launch-box span4 offset4 text-center">
-	<h1>Add Your Image</h1>
+	<h1>Edit Your Image</h1>
 	<br/>
 	<%= simple_form_for @post do |f| %>
-		<%= f.input :title, label: 'Add a title', placeholder: 'Gibson, Martin, Taylor, etc...' %>
+		<%= f.input :title, label: 'Change the title?', placeholder: 'Gibson, Martin, Taylor, etc...' %>
 		<br/>
-		<%= f.input :description, label: 'What\'s going on?', placeholder:'Describe it!' %>
+		<%= f.input :description, label: 'New description?', placeholder:'Describe it!' %>
 		<br/>
 		<%= f.input :image %>
 		<br/>
